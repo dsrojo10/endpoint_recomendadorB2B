@@ -1,0 +1,15 @@
+{
+    "name": "dsrojo10",
+    "version": "1.0.0",
+    "description": "Recomendador de Servicios B2B",
+    "main": "servidor.js",
+    "scripts": {
+      "start": "node servidor.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1"
+    },
+    "engines": {
+      "python": "3.13.1"
+    }
+  }

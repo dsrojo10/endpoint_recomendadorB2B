@@ -1,0 +1,8 @@
+$body = @{
+    sector = @("telecomunicaciones") 
+    gerencia = @("micro_small")
+    sedes = @("1_sede")
+    empleados = @("2_10_empleados")
+} | ConvertTo-Json
+
+Invoke-RestMethod -Method POST -Headers @{ "Content-Type" = "application/json" } -Body $body -Uri http://localhost:3000/prediccion
