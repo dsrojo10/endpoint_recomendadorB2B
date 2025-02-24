@@ -1,5 +1,4 @@
 # Proyecto ML NodeJS 🚀
-**@Autor:** dsrojo
 
 Este proyecto implementa un endpoint en Node.js que invoca scripts en Python para cargar modelos y realizar predicciones basadas en datos de entrada. El servidor se inicia con `npm start` y está preparado para recibir peticiones POST en el endpoint `/prediccion`.
 
