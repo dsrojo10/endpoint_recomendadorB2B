@@ -1,8 +1,19 @@
+// Cliente #1
 $body = @{
     sector = @("telecomunicaciones") 
     gerencia = @("micro_small")
     sedes = @("1_sede")
     empleados = @("2_10_empleados")
+} | ConvertTo-Json
+
+Invoke-RestMethod -Method POST -Headers @{ "Content-Type" = "application/json" } -Body $body -Uri http://localhost:3000/prediccion
+
+// Cliente #2
+$body = @{
+    sector    = @("quimicos")
+    gerencia  = @("large")
+    sedes     = @("2_4_sedes")
+    empleados = @("11_50_empleados")
 } | ConvertTo-Json
 
 Invoke-RestMethod -Method POST -Headers @{ "Content-Type" = "application/json" } -Body $body -Uri http://localhost:3000/prediccion

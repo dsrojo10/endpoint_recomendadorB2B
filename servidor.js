@@ -19,10 +19,17 @@ app.post('/prediccion', (req, res) => {
 
   realizarPrediccion(datos)
     .then(predicciones => {
+      console.log("==========================");
+      console.log("📊 Datos de la empresa recibidos:");
+      console.log(datos);
+      console.log("==========================");
+      console.log("🔮 Recomendación generada:");
+      console.log(predicciones);
+      console.log("==========================");
       res.json(predicciones);
     })
     .catch(error => {
-      console.error('Error en la predicción:', error);
+      console.error('❌ Error en la predicción:', error);
       res.status(500).json({ error: 'Error en la predicción' });
     });
 });
